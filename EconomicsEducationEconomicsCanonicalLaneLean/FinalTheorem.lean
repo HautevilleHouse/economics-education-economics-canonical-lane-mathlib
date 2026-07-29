@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import EconomicsEducationEconomicsCanonicalLaneLean.GeneralEquilibrium
+import EconomicsEducationEconomicsCanonicalLaneLean.UtilityTheory
+import EconomicsEducationEconomicsCanonicalLaneLean.GrowthModel
+import EconomicsEducationEconomicsCanonicalLaneLean.AssetPricing
+import EconomicsEducationEconomicsCanonicalLaneLean.GameTheory
+
+namespace HautevilleHouse
+namespace EconomicsEducationEconomicsCanonicalLaneLean
+
+def ConstrainedEconomicsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_economics_endgame (A : AdmissibleClass) : ConstrainedEconomicsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end EconomicsEducationEconomicsCanonicalLaneLean
+end HautevilleHouse
